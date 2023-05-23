@@ -6,7 +6,8 @@ Example of using Flask to serve a Svelte app and use it as a backend server.
 ```bash
 # Windows
 env/Scripts/activate
-
+```
+```bash
 # Linux, WSL or macOS
 source env/bin/activate
 ```
@@ -19,9 +20,11 @@ This can be done by running the following command:
 python create_db.py
 ```
 
-Run the following for development:
+Run the following in the env activated terminal:
+- `python server.py` to start the Flask server.
 
-- `python3 server.py` to start the Flask server.
-- `cd frontend; npm run dev` to start the Svelte frontend.
+Open a new terminal and run the following:
+- `cd frontend;` then `npm install` to install the Svelte frontend dependencies.
+- `npm run dev` to start the Svelte frontend.
 
 Open `localhost:8080` in your browser to see the app.
