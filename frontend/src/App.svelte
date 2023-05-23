@@ -1,12 +1,23 @@
 <script>
-	let rand = -1;
+	import { onMount } from 'svelte';
+	import ProductList from './ProductList.svelte';
+	import CreateProduct from './CreateProduct.svelte';
+	import OrderList from './OrderList.svelte';
+	import CreateOrder from './CreateOrder.svelte';
+
+	let products = [];  // This line was missing
+
+	onMount(async () => {
+		const response = await fetch('http://localhost:5001/products');
+		products = await response.json();
+	});
+</script>
   
-	function getRand() {
-	  fetch("http://localhost:5001/rand")
-		.then(response => response.text())
-		.then(data => rand = data);
-	}
-  </script>
+<main>
+	<h1>Inventory Management</h1>
   
-  <h1>Your number is {rand}!</h1>
-  <button on:click={getRand}>Get a random number</button>
+	<ProductList />
+	<CreateProduct />
+	<OrderList />
+	<CreateOrder />
+</main>
