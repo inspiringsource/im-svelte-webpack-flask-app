@@ -1,6 +1,10 @@
-server.py # Copied from our earlier project
+server.py 
+create_db.py
+requirements.txt
 README.md
 .gitignore
+.env
+    /DB
     /frontend
         /public
             favicon.png
