@@ -69,11 +69,34 @@ def orders():
     else:
         new_order_data = request.json
         product = Product.query.get(new_order_data["productId"])
+        # Check if the product exists
+        if product is None:
+            return jsonify({"message": "Product not found"}), 404
         product.quantity -= new_order_data["quantity"]
         new_order = Order(product_id=product.id)
         db.session.add(new_order)
         db.session.commit()
         return jsonify(new_order.to_dict()), 201
+
+@app.route("/products/<int:id>", methods=["DELETE"])
+def delete_product(id):
+    product = Product.query.get(id)
+    if product:
+        db.session.delete(product)
+        db.session.commit()
+        return jsonify({"message": f"Product {id} deleted"}), 200
+    else:
+        return jsonify({"message": "Product not found"}), 404
+
+@app.route("/orders/<int:id>", methods=["DELETE"])
+def delete_order(id):
+    order = Order.query.get(id)
+    if order:
+        db.session.delete(order)
+        db.session.commit()
+        return jsonify({"message": f"Order {id} deleted"}), 200
+    else:
+        return jsonify({"message": "Order not found"}), 404
 
 @app.route("/rand")
 def hello():

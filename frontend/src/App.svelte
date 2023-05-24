@@ -17,7 +17,7 @@
 	<h1>Inventory Management</h1>
   
 	<ProductList />
-	<CreateProduct />
-	<OrderList />
+	<!-- <CreateProduct /> -->
+	<!-- <OrderList /> -->
 	<CreateOrder />
 </main>
