@@ -41,9 +41,9 @@
 
 <form on:submit|preventDefault={createOrder}>
   <label>
-    Product ID:
+    SKU / ID:
     <input bind:value={productId} type="number" min="1" />
-  </label>
+  </label>  <!-- Stock Keeping Unit is the product ID -->
   <label>
     Quantity:
     <input bind:value={quantity} type="number" min="1" />

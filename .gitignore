@@ -4,3 +4,4 @@ public/build/bundle.*
 env
 *.db
 *.ipynb
+example.md
