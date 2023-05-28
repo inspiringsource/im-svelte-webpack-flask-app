@@ -33,7 +33,7 @@
     console.log(newOrder);
 
     // Refresh orders after creation
-    fetchOrders();
+    await fetchOrders();
   }
 </script>
 
@@ -56,8 +56,8 @@
 <ul>
   {#each orders as order (order.id)}
     <li>
-      <h2>Order ID: {order.id}</h2>
-      <p>Product ID: {order.productId}</p>
+      <h2>Order Nº: {order.id}</h2>
+      <p>SKU ID: {order.product_id}</p>
       <button on:click={() => deleteOrder(order.id)}>Delete</button>
     </li>
   {/each}

@@ -2,6 +2,17 @@
 
 Example of using Flask to serve a Svelte app and use it as a backend server.
 
+# Create a virtual environment
+
+```bash
+# Windows
+python -m venv env
+```
+```bash
+# Linux, WSL or macOS
+python3 -m venv env
+```
+
 # Activate the virtual environment. 
 ```bash
 # Windows
@@ -10,6 +21,11 @@ env/Scripts/activate
 ```bash
 # Linux, WSL or macOS
 source env/bin/activate
+```
+
+# Install the dependencies
+```bash
+pip install -r requirements.txt
 ```
 
 # Create the database tables
