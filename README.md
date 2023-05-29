@@ -36,9 +36,10 @@ This can be done by running the following command:
 python create_db.py
 ```
 
-Run the following in the env activated terminal:
-- `python server.py` to start the Flask server.
-
+Run the following to start the Flask server.
+```bash
+python server.py
+``` 
 Open a new terminal and run the following:
 - `cd frontend;` then `npm install` to install the Svelte frontend dependencies.
 - `npm run dev` to start the Svelte frontend.

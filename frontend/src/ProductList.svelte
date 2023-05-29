@@ -48,12 +48,12 @@
 
 <ul>
   {#each products as product (product.id)}
-    <li>
-      <h2>Name: {product.name}</h2>
+    <div>
+      <h2>{product.name} 📦</h2>
       <p>Description: {product.description}</p>
       <p>SKU / ID: {product.id}</p>
       <p>Quantity: {product.quantity}</p>
       <button on:click={() => deleteProduct(product.id)}>Delete</button>
-    </li>
+    </div>
   {/each}
 </ul>
