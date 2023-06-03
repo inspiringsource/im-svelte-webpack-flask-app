@@ -3,7 +3,7 @@ node_modules
 public/build/bundle.*
 env
 *.db
-
+*.ipynb
 *.pyc
 example.md
 __pycache__
