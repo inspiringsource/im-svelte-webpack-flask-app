@@ -1,6 +1,6 @@
-# Svelte.js + Python Flask Inventory Management Application
+# Inventory Management Application Svelte.js + Python Flask 
 
-Example of using Flask to serve a Svelte app and use it as a backend server.
+A practical example of a web app using Flask serving a Svelte app, acting as the backend server. The frontend is constructed using Svelte with webpack as the bundler.
 
 # Create a virtual environment
 
